@@ -1,0 +1,33 @@
+<! Bootstrap snippet taken from https://bootsnipp.com/snippets/KAX4X >
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="static/css/upload_image.css" rel="stylesheet" id="bootstrap-css">
+		<script src="static/js/upload_image.js"></script>
+	</head>
+	<body>    
+		<form method="POST" action="/" enctype="multipart/form-data">
+			<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+			<div class="file-upload">
+				<input type="button" name="add_image_button" value="Add Image" class="file-upload-btn" onclick="$('.file-upload-input').trigger( 'click' )" >	
+				<div class="image-upload-wrap">
+				
+					<! BELOW INPUT TYPE IS THE KEY FOR ALL PROCESSING >
+					<input type="file" name="actual_image_location_in_html_page" class="file-upload-input"  onchange="readURL(this);" accept="image/*" >
+					<! ABOVE INPUT TYPE IS THE KEY FOR ALL PROCESSING >					
+					
+					<div class="drag-text">
+						<h3>Drag and drop a file or select add Image</h3>
+					</div>
+				</div>	
+				<div class="file-upload-content">
+					<img class="file-upload-image" src="#" />
+					<div class="image-title-wrap">
+						<input type="button" name="remove_image" class="remove-image" value="Remove" onclick="removeUpload()" >
+						<input type="submit" name="compress_image" class="remove-image" value="Compress" >
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
